@@ -1,0 +1,94 @@
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rentals - Home</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{% static 'css/home/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cars/style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-x0F2X2nQF4m2jV/1AE5wz6hy0nTh0T0ub+wfXmG4B6Bd1Jd8BKNZPIsjeNUTr1sUdMOqG73mCmTOiyFxKHsZLg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <style>
+        .carousel-item img {
+            max-height: 400px; /* Adjust the max height as needed */
+            width: auto; /* Ensures the width adjusts proportionally */
+        }
+    </style>
+</head>
+
+<body >
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <!-- Logo and Company Name -->
+                <a class="navbar-brand" href="#">
+                    <img src="/static/img/logo.png" class="rounded-circle" alt="Car Rentals Logo" height="40">
+                    <!-- Sample Logo -->
+                    Car Rentals
+                </a>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Move navigation links to the right -->
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="{% url "cars:available_cars" %}">Available Cars</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="{% url "aboutus:aboutus" %}">AboutUs</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="btn btn-outline-primary" href="{% url "base:logout" %}">logout</a>                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="about" id="about">
+            <div class="heading">
+                <span>About Us</span>
+                <h1>Best Customer Experience</h1>
+            </div>
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/u/s/n/small-spos14252-poster-dodge-challenger-srt-demon-vehicle-car-original-imagkb9a8scmvp4k.jpeg?q=20&crop=false" alt="">
+                </div>
+                <div class="about-text">
+                    <span>About Us</span>
+                    <p>At Royal Cars pvt.ltd, we are driven by a passion for providing unparalleled travel experiences on wheels. As a leading car rental service, we pride ourselves on delivering exceptional service.</p>
+                    <p>A diverse fleet of vehicles, and a seamless booking process. With us, your journey begins the moment you step into one of our meticulously maintained cars. Our team is dedicated to making your travel dreams a reality. Whether you're embarking on a road trip, exploring a new city, or simply need a reliable vehicle for your daily commute?.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+         </section>
+</body>
+
+</html>
+
+
+{% endblock content %}
